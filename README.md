@@ -1,6 +1,12 @@
 # Title
 ## Introduction
-Suppose you are searching for a person named "Vincent" in one of those big telephone directory books (I know, I'm old). These books can have 100's of pages and it would be tedious to start searching from page 1 and search each page in a linear fashion until you found that person. Fortunatly, the book is sorted alphabetically. Therefore, say you were to make a guess, open the book halfway and land on names starting with "S", then you can simply ignore searching the left half of the book because "V" > "S" and the book is alphabetically sorted. We can repeat this process over and over again until the name "Vincent" is found.
+Suppose you are searching for a person named "Vincent" in one of those big telephone directory books (I know, I'm old). These books can have 100's of pages and it would be tedious to start searching from the first page and search each page in a linear fashion until you found that person. Fortunatly, the book is sorted alphabetically.
+
+Imagine opening the book in the middle. You look at the page and see names starting with "S". Knowing that "V" is after "S", you tear the book in half and discard the half of the book with names below "S". Now you are left with a smaller book to deal with.
+
+Next, you open the remaining book halfway again. You look at where you landed and see names starting with "X". You tear the book in half again and discard the half with names above "X".
+
+Keep repeating this procedure and "Vincent" will be found.
 
 [gif of book ripping]
 
@@ -42,6 +48,6 @@ The steps of binary search can be written as:
 [binary search implementation gist]
 
 ## Guessing game
-For a visual representation of binary search, check out this application I made!
+This game demonstrates the binary search idea visually. The target value is the number we are trying to guess and the guesses the user makes is the middle value in our binary search algorithm.
 
 [link to site once completed]

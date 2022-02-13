@@ -13,25 +13,23 @@ Keep repeating this procedure and "Vincent" will be found.
 This is the concept of **binary search**. Binary search is an efficient algorithm for searching values in a **sorted** array or list. It is part of a large category of algorithms called *divde and conquer*. These classes of algorithms take a complex problem and divide it into smaller chunks of subproblems that are easier to solve. For binary search, at each stage of the solution, the problem is mostly halved each time.
 
 ## Idea
-To illustrate the process of this algorithm, let's say we want to find 47 in the following ordered array of numbers.
+To illustrate the process of this algorithm, let's say we want to find 89 in the following ordered array of numbers. The bottom and top in the diagram are variables holding the start and end index respectively.
 
 [pic of array with ordered numbers + index]
 
-We start by looking at the middle value. The middle value is 40 and it isn't the value we want. Because we know 40 < 47 and the array is sorted, we can eliminate the left half of the array (every value before and including 40). Our problem size has halved.
+We start by calculating the middle value using the bottom and top variables. The middle value is 47 and it isn't the value we want. Because we know 47 < 89 and the array is sorted, we can eliminate the left half of the array (every value before and including 40). This is done by assigning the bottom variable to middle + 1. Our problem size has halved.
 
 [pic of array - halved]
 
-The process repeats again. We look at a value in the middle. The middle value is either 52 or 56 since there is no exact middle. Say 52 is chosen as the middle value, then we know that 52 > 47 and the right half of the array can be eliminated from the search.
+The process repeats again. We calculate the middle value to be 97. Then we know that 97 > 89 and the right half of the array can be eliminated from the search by setting the top variable to middle - 1.
 
 [pic of array - halved again]
 
-Process repeats again. The middle value is 44. We see 44 < 47, and so we elminate the right half of the array. Now we are left with the following values.
+We repeat the process again. The middle value is calculated to be 89. We see 89 = 89 and so we can stop searching and return the value or index!
 
 [pic of array]
 
-We repeat the process again. The middle value is 47. We see 47 = 47 and therefore, the problem is solved and we found the value!
-
-A linear search algorithm would have taken us 11 steps, but binary search only took us 4 steps to find 47. For smaller arrays, the computation time between the two algorithms will be neglliglible. However, for large datasets - were talking millions of values, binary search is more efficient than linear search. [link to article khan academy]
+A linear search algorithm would have taken us 10 steps, but binary search only took us 3 steps to find 89. For smaller arrays, the computation time between the two algorithms will be neglliglible. However, for large datasets - were talking millions of values, binary search shines. [link to article khan academy]
 
 ## Psuedocode
 The steps of binary search can be written as:

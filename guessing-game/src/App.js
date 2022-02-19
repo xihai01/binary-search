@@ -4,18 +4,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          Guess The Number
+        </h1>
       </header>
+      <h2>Attempt: 25</h2>
+      <div id="main"></div>
+      <input type="button" />
     </div>
   );
 }

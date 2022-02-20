@@ -11,12 +11,12 @@ test("generate array of random numbers", () => {
   // assert === numbers are sorted
   let sorted = true;
   const result = generateNumbers();
-  expect(typeof(result)).toBe("array");
+  expect(typeof(result)).toBe("object");
   expect(result).toHaveLength(56);
   for (let i = 1, j = 0; i < result.length; i++, j++) {
     if (result[i] - result[j] < 0) {
       sorted = false;
-      return;
+      break;
     }
   }
   expect(sorted).toBeTruthy();

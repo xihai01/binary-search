@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          Guess The Number
+          Binary Search In Action
         </h1>
       </header>
       <h2>Attempt: 25</h2>

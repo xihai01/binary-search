@@ -2,16 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import generateNumbers from "./helpers/generateNumbers";
 import reportWebVitals from "./reportWebVitals";
-
-function getTargetAnswer() {
-  return Math.random() * (56 - 0) + 0;
-}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App numbers={generateNumbers()} target={getTargetAnswer()} />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

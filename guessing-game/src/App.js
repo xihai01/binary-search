@@ -1,8 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 import Tiles from "./components/Tiles";
+import generateNumbers from "./helpers/generateNumbers";
+
+function getTargetAnswer() {
+  return Math.random() * (56 - 0) + 0;
+}
 
 function App(props) {
-  const { numbers, target } = props;
+  const [state, setState] = useState({
+    numbers: generateNumbers(),
+    target: getTargetAnswer(),
+  });
   return (
     <div className="App">
       <header className="App-header">
@@ -10,7 +19,7 @@ function App(props) {
       </header>
       <h2>Attempt: 25</h2>
       <div id="main">
-        <Tiles numbers={numbers} />
+        <Tiles numbers={state.numbers} />
       </div>
       <input type="button" />
     </div>

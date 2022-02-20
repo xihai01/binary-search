@@ -1,7 +1,7 @@
 const Tiles = (props) => {
   const { numbers } = props;
-  const listOfNumbers = numbers.map((data) => {
-    return <div>{data}</div>;
+  const listOfNumbers = numbers.map((data, index) => {
+    return <div key={index}>{data}</div>;
   });
   return <>{listOfNumbers}</>;
 };

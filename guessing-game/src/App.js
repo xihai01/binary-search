@@ -1,15 +1,17 @@
-import './App.css';
+import "./App.css";
+import Tiles from "./components/Tiles";
 
-function App() {
+function App(props) {
+  const { numbers, target } = props;
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          Binary Search In Action
-        </h1>
+        <h1>Binary Search In Action</h1>
       </header>
       <h2>Attempt: 25</h2>
-      <div id="main"></div>
+      <div id="main">
+        <Tiles numbers={numbers} />
+      </div>
       <input type="button" />
     </div>
   );

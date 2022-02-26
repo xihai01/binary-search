@@ -4,6 +4,7 @@ import Tiles from "./components/Tiles";
 import generateNumbers from "./helpers/generateNumbers";
 
 function getTargetAnswer() {
+  // return a random index
   return Math.floor(Math.random() * (56 - 0) + 0);
 }
 

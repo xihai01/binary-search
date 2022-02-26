@@ -15,7 +15,7 @@ test("generate array of objects", () => {
   expect(typeof(result)).toBe("object");
   expect(result).toHaveLength(56);
   for (let i = 1, j = 0; i < result.length; i++, j++) {
-    if (result[i] - result[j] < 0) {
+    if (result[i].number - result[j].number < 0) {
       sorted = false;
       break;
     }

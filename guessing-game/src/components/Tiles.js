@@ -3,6 +3,7 @@ const clickHandler = function (target, number, numbers, setCorrect, setState) {
   // compare to target answer
   const answer = target;
   const guess = number;
+  console.log(answer);
   if (guess === answer) {
     // display correct page if target guessed
     // setCorrect
@@ -27,9 +28,18 @@ const clickHandler = function (target, number, numbers, setCorrect, setState) {
 };
 
 const Tiles = (props) => {
-  const { numbers, target } = props;
+  const { numbers, target, setCorrect, setState } = props;
   const listOfNumbers = numbers.map((data, index) => {
-    return <div key={index}>{data.number}</div>;
+    return (
+      <div
+        key={index}
+        onClick={() =>
+          clickHandler(target, data.number, numbers, setCorrect, setState)
+        }
+      >
+        {data.number}
+      </div>
+    );
   });
   return <>{listOfNumbers}</>;
 };

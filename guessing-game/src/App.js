@@ -19,7 +19,7 @@ function App(props) {
       </header>
       <h2>Attempt: 25</h2>
       <div id="main">
-        <Tiles numbers={state.numbers} />
+        <Tiles numbers={state.numbers} target={state.target} />
       </div>
       <input type="button" />
     </div>

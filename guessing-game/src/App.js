@@ -17,9 +17,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Binary Search In Action</h1>
-      </header>
+      <h1>Binary Search</h1>
       <h2>Attempt: 25</h2>
       <div id="main">
         <Tiles
@@ -29,7 +27,7 @@ function App(props) {
           setState={setState}
         />
       </div>
-      <input type="button" />
+      <input type="button" name="btn" value="Play again" />
     </div>
   );
 }

@@ -23,6 +23,7 @@ function App(props) {
         <Tiles
           numbers={state.numbers}
           target={state.target}
+          correct={correct}
           setCorrect={setCorrect}
           setState={setState}
         />

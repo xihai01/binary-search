@@ -94,6 +94,11 @@ h2 {
   background-color: #c6e2e9da;
 }
 
+#main .correct {
+  box-shadow:  inset 0px 0px 5px #c1c1c1;
+  background-color: #87f10e;
+}
+
 input {
   color: #f1ffc4;
   border: 0;

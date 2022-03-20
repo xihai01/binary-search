@@ -32,12 +32,13 @@ const clickHandler = function (target, number, numbers, setCorrect, setState) {
 };
 
 const Tiles = (props) => {
-  const { numbers, target, setCorrect, setState } = props;
+  const { numbers, target, correct, setCorrect, setState } = props;
   console.log(numbers);
 
   const listOfNumbers = numbers.map((data, index) => {
     const displayClass = classNames("active", {
       "inactive": !data.active,
+      "correct": correct === true && data.number === numbers[target].number,
     });
     console.log(data.active);
     return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Tiles from "./components/Tiles";
 import generateNumbers from "./helpers/generateNumbers";
@@ -14,11 +14,17 @@ function App(props) {
     target: getTargetAnswer(),
   });
   const [correct, setCorrect] = useState(false);
+  const [counter, setCounter] = useState(-1);
+
+  // increment attempt counter
+  useEffect(() => {
+    setCounter((prev) => prev + 1);
+  }, [state, correct]);
 
   return (
     <div className="App">
       <h1>Binary Search</h1>
-      <h2>Attempt: 25</h2>
+      <h2>Attempt: {counter}</h2>
       <div id="main">
         <Tiles
           numbers={state.numbers}

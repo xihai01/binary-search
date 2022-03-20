@@ -77,13 +77,21 @@ h2 {
   padding: 0.1em;
 }
 
-#main div:hover {
+#main .active:hover {
   cursor: pointer;
 }
 
-#main div:active {
-  cursor: pointer;
+#main .active:active {
   box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+#main .inactive:hover {
+  cursor: not-allowed;
+}
+
+#main .inactive {
+  box-shadow:  inset 0px 0px 5px #c1c1c1;
+  background-color: #c6e2e9da;
 }
 
 input {

@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 const clickHandler = function (target, number, numbers, setCorrect, setState) {
   // get number of tile clicked
   // compare to target answer
@@ -34,9 +36,14 @@ const Tiles = (props) => {
   console.log(numbers);
 
   const listOfNumbers = numbers.map((data, index) => {
+    const displayClass = classNames("active", {
+      "inactive": !data.active,
+    });
+    console.log(data.active);
     return (
       <div
         key={index}
+        className={displayClass}
         onClick={() =>
           clickHandler(target, data.number, numbers, setCorrect, setState)
         }

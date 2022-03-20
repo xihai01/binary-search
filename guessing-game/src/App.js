@@ -34,7 +34,14 @@ function App(props) {
           setState={setState}
         />
       </div>
-      <input type="button" name="btn" value="Play again" />
+      {correct && (
+        <input
+          type="button"
+          name="btn"
+          value="Play again"
+          onClick={() => window.location.reload()}
+        />
+      )}
     </div>
   );
 }

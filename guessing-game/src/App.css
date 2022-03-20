@@ -105,4 +105,5 @@ input {
   background: inherit;
   font-size: 0.8em;
   grid-area: button;
+  cursor: pointer;
 }

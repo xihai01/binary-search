@@ -37,17 +37,25 @@ const Tiles = (props) => {
 
   const listOfNumbers = numbers.map((data, index) => {
     const displayClass = classNames("active", {
-      "inactive": !data.active,
-      "correct": correct === true && data.number === numbers[target].number,
+      inactive: !data.active,
+      correct: correct === true && data.number === numbers[target].number,
     });
-    console.log(data.active);
+    console.log(displayClass);
     return (
       <div
         key={index}
         className={displayClass}
-        onClick={() =>
-          clickHandler(target, data.number, numbers, setCorrect, setState)
-        }
+        onClick={() => {
+          if (displayClass !== "active inactive") {
+            return clickHandler(
+              target,
+              data.number,
+              numbers,
+              setCorrect,
+              setState
+            );
+          }
+        }}
       >
         {data.number}
       </div>

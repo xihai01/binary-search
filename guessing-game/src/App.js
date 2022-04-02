@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Tiles from "./components/Tiles";
-import generateNumbers from "./helpers/generateNumbers";
-
-function getTargetAnswer() {
-  // return a random index
-  return Math.floor(Math.random() * (56 - 0) + 0);
-}
+import { generateNumbers, getTargetAnswer } from "./helpers/generateNumbers";
 
 function App(props) {
   const [state, setState] = useState({

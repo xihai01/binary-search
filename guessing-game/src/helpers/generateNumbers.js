@@ -13,4 +13,9 @@ const generateNumbers = () => {
   return output.sort((a, b) => a.number - b.number);
 };
 
-export default generateNumbers;
+const getTargetAnswer = () => {
+  // return a random index
+  return Math.floor(Math.random() * (56 - 0) + 0);
+};
+
+export { generateNumbers, getTargetAnswer };

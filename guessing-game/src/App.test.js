@@ -1,6 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
-import generateNumbers from "./helpers/generateNumbers";
+import { generateNumbers } from "./helpers/generateNumbers";
 
 test("generate array of objects", () => {
   // dut === function to generate random sorted array of objects
@@ -12,7 +10,7 @@ test("generate array of objects", () => {
   // assert === numbers are active
   let sorted = true;
   const result = generateNumbers();
-  expect(typeof(result)).toBe("object");
+  expect(typeof result).toBe("object");
   expect(result).toHaveLength(56);
   for (let i = 1, j = 0; i < result.length; i++, j++) {
     if (result[i].number - result[j].number < 0) {

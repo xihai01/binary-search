@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/binary-search/static/css/main.b656650b.css",
+    "main.js": "/binary-search/static/js/main.f42a9021.js",
+    "static/js/787.1859ebdf.chunk.js": "/binary-search/static/js/787.1859ebdf.chunk.js",
+    "index.html": "/binary-search/index.html",
+    "main.b656650b.css.map": "/binary-search/static/css/main.b656650b.css.map",
+    "main.f42a9021.js.map": "/binary-search/static/js/main.f42a9021.js.map",
+    "787.1859ebdf.chunk.js.map": "/binary-search/static/js/787.1859ebdf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b656650b.css",
+    "static/js/main.f42a9021.js"
+  ]
+}
